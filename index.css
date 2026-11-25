@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+  --bg:#FFFFFF;
+  --surface:#FFFFFF;
+  --surface-2:#F7F7F5;
+  --line:#E8E8E8;
+  --orange:#FF6B00;
+  --orange-2:#E85D00;
+  --yellow:#FF6B00;
+  --text:#1A1A1A;
+  --muted:#5A5A5A;
+  --whats:#1FA855;
+}
+*{ box-sizing:border-box; }
+html{ scroll-behavior:smooth; color-scheme: light; background:#FFFFFF; }
+body{ margin:0; background:#FFFFFF; color:#1A1A1A; font-family:'Barlow',system-ui,-apple-system,sans-serif; }
+.font-display{ font-family:'Barlow',system-ui,sans-serif; }
+.no-scrollbar::-webkit-scrollbar{ display:none; }
+.no-scrollbar{ scrollbar-width:none; }
+input,select,textarea{ color:#111; }
+@keyframes locomaq-flash { 0%{ box-shadow:0 0 0 0 rgba(255,107,0,.55);} 100%{ box-shadow:0 0 0 14px rgba(255,107,0,0);} }
+.flash-card{ animation: locomaq-flash 0.9s ease-out 2; }
+@keyframes locomaq-panel-in { from{ transform: translateY(18px); opacity:.92;} to{ transform: translateY(0); opacity:1;} }
+.panel-slide{ animation: locomaq-panel-in .28s ease-out; }
+@media (min-width:640px){ @keyframes locomaq-panel-in { from{ transform: translateX(32px); opacity:.92;} to{ transform: translateX(0); opacity:1;} } }
